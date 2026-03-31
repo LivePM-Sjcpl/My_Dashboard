@@ -1,0 +1,24 @@
+import streamlit as st
+
+# Title
+st.title("Simple Dashboard App")
+
+# User input
+name = st.text_input("Enter your name")
+
+# Dropdown
+option = st.selectbox("Choose a game", ["Cricket", "Football", "Casino"])
+
+# Number input
+amount = st.number_input("Enter amount", min_value=0)
+
+# Button action
+if st.button("Submit"):
+    st.success(f"Hello {name} 👋")
+    st.write(f"You selected: {option}")
+    st.write(f"Amount entered: ₹{amount}")
+
+# Simple chart
+st.subheader("Sample Chart")
+data = [10, 20, 15, 30, 25]
+st.line_chart(data)
